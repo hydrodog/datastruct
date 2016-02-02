@@ -35,42 +35,32 @@ public class Heapsort {
 		}
 	}
 
-	void makeheap(int x[], int n) {
+	public static void makeheap(int x[], int n) {
 		for (int i = n / 2; i >= 0; i--)
 	    match(x, i, n);		
 	}
 
-	void reformHeap(int x[], int n) {
+	public static void reformHeap(int x[], int n) {
 		int temp = x[0];
 		x[0] = x[n-1];
 		x[n-1] = temp;
 		match(x, 0, n);
 	}
 
-	void heapsort(int x[], int n) {
+	public static void heapsort(int x[]) {
+		int n = x.length;
 		makeheap(x, n);
 		for (int i = n/2; i >= 0; i--)
 			reformHeap(x, n--);
 	}
 
-	public static void makeRandom(int x[], int n) {
+	public static void makeRandom(int x[]) {
 		Random r = new Random(0);
-		
+		final int n = x.length;
 		for (int i = 0; i < n; i++)
-			x[i] = r.nextInt(n);
+			x[i] = r.nextInt(n)+1;
 	}
-
-	public static void heapsort(int [] x) {
 		
-		
-		
-		
-		
-		
-	}
-	
-	
-	
 	public static void main(String[] a) throws Exception {
 		Scanner s = new Scanner(new FileReader("hw3.dat"));
 		
