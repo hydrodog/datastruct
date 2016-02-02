@@ -35,7 +35,7 @@ void makeheap(int x[], int n) {
 }
 
 void reformHeap(int x[], int n) {
-	swap(x[0], x[n]);
+	swap(x[0], x[n-1]);
 	match(x, 0, n);
 }
 
@@ -45,6 +45,8 @@ void heapsort(int x[], int n) {
 		reformHeap(x, n--);
 }
 
+// this is much better than rand()
+// libboost is much better!  Now in std
 void makeRandom(int x[], int n) {
 	default_random_engine generator;
 	uniform_int_distribution<int> rnd(1,n);
@@ -56,10 +58,11 @@ int main() {
 	ifstream f("hw3.dat");
 	int n;
   f >> n;
-	int x[n]; //  int*  =  new int[n];
+	int x[n]; //  int*x  =  new int[n];
 	for (int i = 0; i < n; i++)
 		f >> x[i];
 	heapsort(x, n);
 	for (int i = 0; i < n; i++)
 		cout << x[i] << ' ';
+	//delete [] x;
 }
