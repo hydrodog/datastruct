@@ -7,7 +7,7 @@ public class InsertionSort {
 			int temp = x[i];
 			int j;
 			for (j = i-1; j >= 0; j--) {
-				if (x[j] > x[i])
+				if (x[j] > temp)
 					x[j+1] = x[j];
 				else {
 					break;
