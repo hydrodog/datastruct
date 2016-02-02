@@ -68,8 +68,10 @@ public class Heapsort {
 		int[] x = new int[n];
 		for (int i = 0; i < n; i++)
 			x[i] = s.nextInt();
-		heapsort(x);
-		
+		//heapsort(x);
+		InsertionSort.sort(x);
+		for (int i = 0; i < x.length; i++)
+			System.out.print(x[i] + " ");
 		s.close();
 	}
 }
