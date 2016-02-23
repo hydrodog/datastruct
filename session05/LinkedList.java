@@ -30,8 +30,15 @@ public class LinkedList {
 		p.next.val = v;
 		p.next.next = null;
 	}
+	public void removeStart() {
 
-	int get(int pos)  {
+	}
+
+	public void removeEnd() {
+
+	}
+	
+	public int get(int pos)  {
     Node p = head;
 		for (int i = 1; i < pos; i++) {
 			p = p.next;
