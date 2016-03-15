@@ -1,0 +1,7 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=61137F2F
+eax=00403061 ebx=0028CB56 ecx=00000003 edx=0028CB54 esi=0028CB54 edi=00403061
+ebp=0028C778 esp=0028C76C program=C:\Users\dkruger\git\datastruct\session08\a.exe, pid 4064, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0028C778  61137F2F (00403061, 0028CB54, 00000003, 00000000)
