@@ -18,7 +18,13 @@ public:
 		head = nullptr;
 	}
 	~LinkedList() {
- 		Node* q;
+#if 0
+		// ILLEGAL: You cannot refer to memory after deletion
+		for (Node* p = head; p != nullptr; p = p->next)
+			delete p;
+#endif
+
+		Node* q;
 		for (Node* p = head; p!= nullptr; p=q) {
 			q = p->next; 
 			delete p;
@@ -39,8 +45,16 @@ public:
 		for (int i = 0; i < orig.size(); i++)
 			addEnd(orig.get(i));
 #endif
+
+
+
+
+
+
+
+		
 		if (orig.head == nullptr) {
-			head = null;
+			head = nullptr;
 			return;
 		}
 		head = new Node(orig.head->val, nullptr, nullptr);
@@ -48,10 +62,10 @@ public:
 		Node*q = head;
 		for (Node* p = orig.head->next; p!= nullptr; p = p->next) {
 			q->next = new Node(p->val, nullptr, q);
-
+      q = q->next;
 		}
 	}
-	void addStart(const T& v) {
+	void addStart(const T& v) { //O(1)
 		if (head == nullptr) {
 			head = new Node(v, head, nullptr);
 			return;
