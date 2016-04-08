@@ -22,8 +22,8 @@ public:
 		int i;
 		for (i = 1; i < initialSize; i *= 2)
 			;
+		size = i;
 		limit = i / 2;
-		size = limit*2;
 		table = new string*[size];
 		for (int i = 0; i < size; i++)
 			table[i] = nullptr;
