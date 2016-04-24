@@ -1,0 +1,34 @@
+g.DFS(v)
+	visited = []
+	g.DGS(v, visited)
+end
+
+g.DFS(v, visited)
+  visited[v] = true
+  print v
+  foreach n neighbor(v)
+  	  if visited[n] == false
+	     g.DFS(n, visited)
+	  end
+  end
+end
+
+
+iterative
+
+g.IterativeDFS(v)
+  visited = false
+  stack s
+  s.push(v)
+
+  while NOT s.empty()
+  	v = s.pop()
+	visited[v] = true
+	foreach n neighbor(v)
+	  if visited[n] == false
+	    s.push(n)
+	  end
+	end
+  end
+end
+

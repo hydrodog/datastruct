@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=00401967
+eax=00000000 ebx=00000000 ecx=FFE20008 edx=00000100 esi=00000000 edi=FFD00008
+ebp=0028CC68 esp=0028CC00 program=C:\Users\dkruger\git\datastruct\session11-matrixalg\a.exe, pid 5828, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0028CC68  00401967 (00000002, 0028CC8C, 80010100, 610083CF)
+0028CD18  6100842E (00000000, 0028CD74, 61007530, 00000000)
+End of stack trace
